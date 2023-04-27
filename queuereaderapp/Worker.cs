@@ -55,7 +55,7 @@ namespace QueueWorker
                         }
 
                         logger.LogInformation($"Message ID: '{message.MessageId}', contents: '{message.Body?.ToString()}'");
-                        logger.LogInformation("This is a new log message4!");
+                        logger.LogInformation("This is a new log message5;!");
                         
                         await httpClient.PostAsync(storeUrl, JsonContent.Create(new { Id = message.MessageId, Message = message.Body?.ToString() }), stoppingToken);
 
